@@ -29,7 +29,6 @@ def signup(request):
         except User.DoesNotExist:
             return render(request, "signup.html", {"form": SignUpForm})
     return render(request, "signup.html", {"form": SignUpForm})
-    pass
 
 
 def index(request):
@@ -100,7 +99,6 @@ def concerts(request):
         return render(request, "concerts.html", {"concerts": lst_of_concert})
     else:
         return HttpResponseRedirect(reverse("login"))
-    pass
 
 
 def concert_detail(request, id):
